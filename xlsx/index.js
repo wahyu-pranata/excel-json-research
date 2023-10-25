@@ -8,12 +8,12 @@ sheetList.forEach((sheet) => {
   let headers = {};
   let data = [];
 
-  for (x in worksheet) {
-    const col = x.substring(0, 1);
-    const row = x.substring(1);
+  for (cell in worksheet) {
+    const col = cell.substring(0, 1);
+    const row = cell.substring(1);
 
     // v means Value in JSON structure
-    const value = worksheet[x].v;
+    const value = worksheet[cell].v;
 
     if (row == 1) {
       headers[col] = value;
